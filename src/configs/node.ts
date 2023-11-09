@@ -1,10 +1,10 @@
-import type { ConfigItem } from '../types'
 import { pluginNode } from '../plugins'
+import type { ConfigItem } from '../types'
 
 export function node(): ConfigItem[] {
   return [
     {
-      name: 'antfu:node',
+      name: 'wcw:node',
       plugins: {
         node: pluginNode,
       },

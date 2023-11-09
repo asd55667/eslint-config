@@ -1,8 +1,8 @@
 import { join, resolve } from 'node:path'
-import { afterAll, beforeAll, it } from 'vitest'
-import fs from 'fs-extra'
 import { execa } from 'execa'
 import fg from 'fast-glob'
+import fs from 'fs-extra'
+import { afterAll, beforeAll, it } from 'vitest'
 import type { ConfigItem, OptionsConfig } from '../src/types'
 
 beforeAll(async () => {
@@ -60,9 +60,9 @@ function runWithConfig(name: string, configs: OptionsConfig, ...items: ConfigIte
     })
     await fs.writeFile(join(target, 'eslint.config.js'), `
 // @eslint-disable
-import antfu from '@antfu/eslint-config'
+import wcw from '@wcw/eslint-config'
 
-export default antfu(
+export default wcw(
   ${JSON.stringify(configs)},
   ...${JSON.stringify(items) ?? []},
 )

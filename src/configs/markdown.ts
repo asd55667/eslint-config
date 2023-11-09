@@ -1,6 +1,6 @@
-import type { ConfigItem, OptionsComponentExts, OptionsOverrides } from '../types'
 import { GLOB_MARKDOWN, GLOB_MARKDOWN_CODE } from '../globs'
 import { pluginMarkdown } from '../plugins'
+import type { ConfigItem, OptionsComponentExts, OptionsOverrides } from '../types'
 
 export function markdown(options: OptionsComponentExts & OptionsOverrides = {}): ConfigItem[] {
   const {
@@ -10,14 +10,14 @@ export function markdown(options: OptionsComponentExts & OptionsOverrides = {}):
 
   return [
     {
-      name: 'antfu:markdown:setup',
+      name: 'wcw:markdown:setup',
       plugins: {
         markdown: pluginMarkdown,
       },
     },
     {
       files: [GLOB_MARKDOWN],
-      name: 'antfu:markdown:processor',
+      name: 'wcw:markdown:processor',
       processor: 'markdown/markdown',
     },
     {
@@ -32,7 +32,7 @@ export function markdown(options: OptionsComponentExts & OptionsOverrides = {}):
           },
         },
       },
-      name: 'antfu:markdown:rules',
+      name: 'wcw:markdown:rules',
       rules: {
         'antfu/no-cjs-exports': 'off',
         'antfu/no-ts-export-equal': 'off',

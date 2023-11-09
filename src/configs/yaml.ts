@@ -1,6 +1,6 @@
-import type { ConfigItem, OptionsOverrides, OptionsStylistic } from '../types'
 import { GLOB_YAML } from '../globs'
 import { parserYaml, pluginYaml } from '../plugins'
+import type { ConfigItem, OptionsOverrides, OptionsStylistic } from '../types'
 
 export function yaml(
   options: OptionsOverrides & OptionsStylistic = {},
@@ -17,7 +17,7 @@ export function yaml(
 
   return [
     {
-      name: 'antfu:yaml:setup',
+      name: 'wcw:yaml:setup',
       plugins: {
         yaml: pluginYaml as any,
       },
@@ -27,7 +27,7 @@ export function yaml(
       languageOptions: {
         parser: parserYaml,
       },
-      name: 'antfu:yaml:rules',
+      name: 'wcw:yaml:rules',
       rules: {
         'style/spaced-comment': 'off',
 

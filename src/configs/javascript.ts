@@ -1,7 +1,7 @@
 import globals from 'globals'
-import type { ConfigItem, OptionsIsInEditor, OptionsOverrides } from '../types'
-import { pluginAntfu, pluginUnusedImports } from '../plugins'
 import { GLOB_SRC, GLOB_SRC_EXT } from '../globs'
+import { pluginAntfu, pluginUnusedImports } from '../plugins'
+import type { ConfigItem, OptionsIsInEditor, OptionsOverrides } from '../types'
 
 export function javascript(options: OptionsIsInEditor & OptionsOverrides = {}): ConfigItem[] {
   const {
@@ -33,7 +33,7 @@ export function javascript(options: OptionsIsInEditor & OptionsOverrides = {}): 
       linterOptions: {
         reportUnusedDisableDirectives: true,
       },
-      name: 'antfu:javascript',
+      name: 'wcw:javascript',
       plugins: {
         'antfu': pluginAntfu,
         'unused-imports': pluginUnusedImports,
@@ -216,7 +216,7 @@ export function javascript(options: OptionsIsInEditor & OptionsOverrides = {}): 
     },
     {
       files: [`scripts/${GLOB_SRC}`, `cli.${GLOB_SRC_EXT}`],
-      name: 'antfu:scripts-overrides',
+      name: 'wcw:scripts-overrides',
       rules: {
         'no-console': 'off',
       },

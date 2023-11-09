@@ -1,7 +1,7 @@
 import process from 'node:process'
-import type { ConfigItem, OptionsComponentExts, OptionsOverrides, OptionsTypeScriptParserOptions, OptionsTypeScriptWithTypes } from '../types'
 import { GLOB_SRC } from '../globs'
 import { parserTs, pluginAntfu, pluginImport, pluginTs } from '../plugins'
+import type { ConfigItem, OptionsComponentExts, OptionsOverrides, OptionsTypeScriptParserOptions, OptionsTypeScriptWithTypes } from '../types'
 import { renameRules, toArray } from '../utils'
 
 export function typescript(
@@ -42,7 +42,7 @@ export function typescript(
   return [
     {
       // Install the plugins without globs, so they can be configured separately.
-      name: 'antfu:typescript:setup',
+      name: 'wcw:typescript:setup',
       plugins: {
         antfu: pluginAntfu,
         import: pluginImport,
@@ -68,7 +68,7 @@ export function typescript(
           ...parserOptions as any,
         },
       },
-      name: 'antfu:typescript:rules',
+      name: 'wcw:typescript:rules',
       rules: {
         ...renameRules(
           pluginTs.configs['eslint-recommended'].overrides![0].rules!,
@@ -119,7 +119,7 @@ export function typescript(
     },
     {
       files: ['**/*.d.ts'],
-      name: 'antfu:typescript:dts-overrides',
+      name: 'wcw:typescript:dts-overrides',
       rules: {
         'eslint-comments/no-unlimited-disable': 'off',
         'import/no-duplicates': 'off',
@@ -129,14 +129,14 @@ export function typescript(
     },
     {
       files: ['**/*.{test,spec}.ts?(x)'],
-      name: 'antfu:typescript:tests-overrides',
+      name: 'wcw:typescript:tests-overrides',
       rules: {
         'no-unused-expressions': 'off',
       },
     },
     {
       files: ['**/*.js', '**/*.cjs'],
-      name: 'antfu:typescript:javascript-overrides',
+      name: 'wcw:typescript:javascript-overrides',
       rules: {
         'ts/no-require-imports': 'off',
         'ts/no-var-requires': 'off',

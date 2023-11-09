@@ -1,5 +1,5 @@
-import type { ConfigItem, OptionsStylistic } from '../types'
 import { pluginJsdoc } from '../plugins'
+import type { ConfigItem, OptionsStylistic } from '../types'
 
 export function jsdoc(options: OptionsStylistic = {}): ConfigItem[] {
   const {
@@ -8,7 +8,7 @@ export function jsdoc(options: OptionsStylistic = {}): ConfigItem[] {
 
   return [
     {
-      name: 'antfu:jsdoc',
+      name: 'wcw:jsdoc',
       plugins: {
         jsdoc: pluginJsdoc,
       },

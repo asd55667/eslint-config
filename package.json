@@ -1,13 +1,11 @@
 {
-  "name": "@antfu/eslint-config",
+  "name": "@wcw/eslint-config",
   "type": "module",
-  "version": "1.1.0",
+  "version": "0.0.0",
   "packageManager": "pnpm@8.10.2",
-  "description": "Anthony's ESLint config",
-  "author": "Anthony Fu <anthonyfu117@hotmail.com> (https://github.com/antfu/)",
+  "description": "wcw's ESLint config",
   "license": "MIT",
-  "funding": "https://github.com/sponsors/antfu",
-  "homepage": "https://github.com/antfu/eslint-config",
+  "homepage": "https://github.com/asd55667/eslint-config",
   "keywords": [
     "eslint-config"
   ],
@@ -63,14 +61,14 @@
     "yaml-eslint-parser": "^1.2.2"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "workspace:*",
     "@antfu/ni": "^0.21.8",
     "@stylistic/eslint-plugin-migrate": "^1.0.0",
     "@types/eslint": "^8.44.6",
     "@types/fs-extra": "^11.0.3",
     "@types/node": "^20.8.10",
+    "@wcw/eslint-config": "workspace:*",
     "bumpp": "^9.2.0",
-    "eslint": "^8.52.0",
+    "eslint": "^8.53.0",
     "eslint-flat-config-viewer": "^0.1.0",
     "esno": "^0.17.0",
     "fast-glob": "^3.3.1",

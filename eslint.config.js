@@ -1,8 +1,8 @@
 // @ts-check
 import styleMigrate from '@stylistic/eslint-plugin-migrate'
-import antfu from './dist/index.js'
+import wcw from './dist/index.js'
 
-export default antfu(
+export default wcw(
   {
     vue: true,
     typescript: true,

@@ -1,5 +1,5 @@
-import type { ConfigItem, StylisticConfig } from '../types'
 import { pluginAntfu, pluginStylistic } from '../plugins'
+import type { ConfigItem, StylisticConfig } from '../types'
 
 export function stylistic(options: StylisticConfig = {}): ConfigItem[] {
   const {
@@ -10,7 +10,7 @@ export function stylistic(options: StylisticConfig = {}): ConfigItem[] {
 
   return [
     {
-      name: 'antfu:stylistic',
+      name: 'wcw:stylistic',
       plugins: {
         antfu: pluginAntfu,
         style: pluginStylistic,

@@ -1,6 +1,6 @@
-import type { ConfigItem, OptionsIsInEditor, OptionsOverrides } from '../types'
-import { pluginNoOnlyTests, pluginVitest } from '../plugins'
 import { GLOB_TESTS } from '../globs'
+import { pluginNoOnlyTests, pluginVitest } from '../plugins'
+import type { ConfigItem, OptionsIsInEditor, OptionsOverrides } from '../types'
 
 export function test(options: OptionsIsInEditor & OptionsOverrides = {}): ConfigItem[] {
   const {
@@ -10,7 +10,7 @@ export function test(options: OptionsIsInEditor & OptionsOverrides = {}): Config
 
   return [
     {
-      name: 'antfu:test:setup',
+      name: 'wcw:test:setup',
       plugins: {
         test: {
           ...pluginVitest,
@@ -24,7 +24,7 @@ export function test(options: OptionsIsInEditor & OptionsOverrides = {}): Config
     },
     {
       files: GLOB_TESTS,
-      name: 'antfu:test:rules',
+      name: 'wcw:test:rules',
       rules: {
         'test/consistent-test-it': ['error', { fn: 'it', withinDescribe: 'it' }],
         'test/no-identical-title': 'error',

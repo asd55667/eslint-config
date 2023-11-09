@@ -1,5 +1,5 @@
-import type { ConfigItem, OptionsStylistic } from '../types'
 import { pluginAntfu, pluginImport } from '../plugins'
+import type { ConfigItem, OptionsStylistic } from '../types'
 
 export function imports(options: OptionsStylistic = {}): ConfigItem[] {
   const {
@@ -8,7 +8,7 @@ export function imports(options: OptionsStylistic = {}): ConfigItem[] {
 
   return [
     {
-      name: 'antfu:imports',
+      name: 'wcw:imports',
       plugins: {
         antfu: pluginAntfu,
         import: pluginImport,
@@ -17,7 +17,7 @@ export function imports(options: OptionsStylistic = {}): ConfigItem[] {
         'antfu/import-dedupe': 'error',
         'antfu/no-import-node-modules-by-path': 'error',
 
-        'import/first': 'error',
+        // 'import/first': 'error',
         'import/no-duplicates': 'error',
         'import/no-mutable-exports': 'error',
         'import/no-named-default': 'error',

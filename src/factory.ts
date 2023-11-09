@@ -1,8 +1,7 @@
-import process from 'node:process'
 import fs from 'node:fs'
-import { isPackageExists } from 'local-pkg'
+import process from 'node:process'
 import gitignore from 'eslint-config-flat-gitignore'
-import type { ConfigItem, OptionsConfig } from './types'
+import { isPackageExists } from 'local-pkg'
 import {
   comments,
   ignores,
@@ -22,6 +21,7 @@ import {
   vue,
   yaml,
 } from './configs'
+import type { ConfigItem, OptionsConfig } from './types'
 import { combine } from './utils'
 
 const flatConfigProps: (keyof ConfigItem)[] = [
@@ -45,7 +45,7 @@ const VuePackages = [
 /**
  * Construct an array of ESLint flat config items.
  */
-export function antfu(options: OptionsConfig & ConfigItem = {}, ...userConfigs: (ConfigItem | ConfigItem[])[]) {
+export function wcw(options: OptionsConfig & ConfigItem = {}, ...userConfigs: (ConfigItem | ConfigItem[])[]) {
   const {
     componentExts = [],
     gitignore: enableGitignore = true,

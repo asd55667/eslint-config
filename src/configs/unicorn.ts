@@ -1,10 +1,10 @@
-import type { ConfigItem } from '../types'
 import { pluginUnicorn } from '../plugins'
+import type { ConfigItem } from '../types'
 
 export function unicorn(): ConfigItem[] {
   return [
     {
-      name: 'antfu:unicorn',
+      name: 'wcw:unicorn',
       plugins: {
         unicorn: pluginUnicorn,
       },

@@ -1,6 +1,6 @@
-import type { ConfigItem, OptionsHasTypeScript, OptionsOverrides, OptionsStylistic } from '../types'
 import { GLOB_VUE } from '../globs'
 import { parserTs, parserVue, pluginVue } from '../plugins'
+import type { ConfigItem, OptionsHasTypeScript, OptionsOverrides, OptionsStylistic } from '../types'
 
 export function vue(
   options: OptionsHasTypeScript & OptionsOverrides & OptionsStylistic = {},
@@ -16,7 +16,7 @@ export function vue(
 
   return [
     {
-      name: 'antfu:vue:setup',
+      name: 'wcw:vue:setup',
       plugins: {
         vue: pluginVue,
       },
@@ -34,7 +34,7 @@ export function vue(
           sourceType: 'module',
         },
       },
-      name: 'antfu:vue:rules',
+      name: 'wcw:vue:rules',
       processor: pluginVue.processors['.vue'],
       rules: {
         ...pluginVue.configs.base.rules as any,

@@ -1,10 +1,10 @@
-import type { ConfigItem } from '../types'
 import { pluginComments } from '../plugins'
+import type { ConfigItem } from '../types'
 
 export function comments(): ConfigItem[] {
   return [
     {
-      name: 'antfu:eslint-comments',
+      name: 'wcw:eslint-comments',
       plugins: {
         'eslint-comments': pluginComments,
       },
