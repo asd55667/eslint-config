@@ -1,1 +1,1 @@
-# @wcw/eslint-config
+# @asd55667/eslint-config

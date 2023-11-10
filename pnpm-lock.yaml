@@ -92,7 +92,7 @@ importers:
       '@types/node':
         specifier: ^20.8.10
         version: 20.8.10
-      '@wcw/eslint-config':
+      '@asd55667/eslint-config':
         specifier: workspace:*
         version: 'link:'
       bumpp:

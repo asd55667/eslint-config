@@ -1,5 +1,5 @@
 {
-  "name": "@wcw/eslint-config",
+  "name": "@asd55667/eslint-config",
   "type": "module",
   "version": "0.0.1",
   "packageManager": "pnpm@8.10.2",
@@ -62,11 +62,11 @@
   },
   "devDependencies": {
     "@antfu/ni": "^0.21.8",
+    "@asd55667/eslint-config": "workspace:*",
     "@stylistic/eslint-plugin-migrate": "^1.0.0",
     "@types/eslint": "^8.44.6",
     "@types/fs-extra": "^11.0.3",
     "@types/node": "^20.8.10",
-    "@wcw/eslint-config": "workspace:*",
     "bumpp": "^9.2.0",
     "eslint": "^8.53.0",
     "eslint-flat-config-viewer": "^0.1.0",

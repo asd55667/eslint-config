@@ -60,7 +60,7 @@ function runWithConfig(name: string, configs: OptionsConfig, ...items: ConfigIte
     })
     await fs.writeFile(join(target, 'eslint.config.js'), `
 // @eslint-disable
-import wcw from '@wcw/eslint-config'
+import wcw from '@asd55667/eslint-config'
 
 export default wcw(
   ${JSON.stringify(configs)},
